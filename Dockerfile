@@ -7,7 +7,7 @@ RUN \
   apt-get -y upgrade && \
   apt -y install build-essential git curl wget libnewt-dev libssl-dev \
   libncurses5-dev subversion libsqlite3-dev libjansson-dev libxml2-dev uuid-dev \
-  default-libmysqlclient-dev htop sngrep lame ffmpeg mpg123 
+  default-libmysqlclient-dev htop sngrep lame ffmpeg mpg123 apt-utils
 RUN \
   apt -y install git vim curl wget libnewt-dev libssl-dev libncurses5-dev \
   subversion libsqlite3-dev build-essential libjansson-dev libxml2-dev uuid-dev expect

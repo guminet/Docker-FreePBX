@@ -25,7 +25,7 @@ RUN \
   cd /usr/src/asterisk-22*/ && \
   contrib/scripts/get_mp3_source.sh && \
   contrib/scripts/install_prereq install && \
-  ./configure --libdir=/usr/lib64 --with-pjproject-bundled --with-jansson-bundled && \
+  ./configure --libdir=/usr/lib64 --with-pjproject-bundled --with-jansson-bundled
 RUN \
   make menuselect.makeopts && \
   menuselect/menuselect --enable app_macro menuselect.makeopts && \

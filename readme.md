@@ -5,7 +5,7 @@ Container repository: [Docker](https://hub.docker.com/r/blacksunsolutions/freepb
 ### Setup Guide  
 Clone this repository  
 ```
-git clone https://github.com/scorpionukr/Docker-FreePBX.git
+git clone https://github.com/guminet/Docker-FreePBX.git
 ```
 Start image with Docker Compose  
 ```

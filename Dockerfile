@@ -20,9 +20,9 @@ RUN \
   odbc-mariadb libical-dev libneon27-dev libsrtp2-dev libspandsp-dev sudo subversion libtool-bin \
   python-dev-is-python3 unixodbc vim wget libjansson-dev software-properties-common nodejs npm ipset iptables fail2ban php-soap
 RUN \
-  wget -O /usr/src/asterisk-20-current.tar.gz http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-20-current.tar.gz && \
-  tar xvf /usr/src/asterisk-20-current.tar.gz -C /usr/src/ && \
-  cd /usr/src/asterisk-20*/ && \
+  wget -O /usr/src/asterisk-22-current.tar.gz http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-22-current.tar.gz && \
+  tar xvf /usr/src/asterisk-22-current.tar.gz -C /usr/src/ && \
+  cd /usr/src/asterisk-22*/ && \
   contrib/scripts/get_mp3_source.sh && \
   contrib/scripts/install_prereq install && \
   ./configure --libdir=/usr/lib64 --with-pjproject-bundled --with-jansson-bundled && \
@@ -61,7 +61,7 @@ COPY odbcinst.ini /etc/odbcinst.ini
 RUN \
   wget -O /usr/local/src/freepbx-17.0-latest-EDGE.tgz http://mirror.freepbx.org/modules/packages/freepbx/freepbx-17.0-latest-EDGE.tgz && \
   tar zxvf /usr/local/src/freepbx-17.0-latest-EDGE.tgz -C /usr/local/src && \
-  rm /usr/src/asterisk-20-current.tar.gz && \
+  rm /usr/src/asterisk-22-current.tar.gz && \
   rm /usr/local/src/freepbx-17.0-latest-EDGE.tgz && \
   apt-get clean
 ADD run-httpd.sh /run-httpd.sh

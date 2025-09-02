@@ -27,8 +27,10 @@ RUN \
   contrib/scripts/install_prereq install && \
   ./configure --libdir=/usr/lib64 --with-pjproject-bundled --with-jansson-bundled
 RUN \
+  cd /usr/src/asterisk-22*/ && \
   make menuselect.makeopts && \
-  menuselect/menuselect --enable app_macro menuselect.makeopts && \
+  menuselect/menuselect --enable app_macro menuselect.makeopts
+RUN \  
   make menuselect && \
   make && \
   make install && \

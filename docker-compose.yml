@@ -10,7 +10,7 @@ services:
       - 5060:5060
       - 10000-20000:10000-20000/udp
     environment:
-      - TZ=Europe/Kiev
+      - TZ=Europe/Bratislava
       - DB_USER=asterisk
       - DB_PASS=asteriskpass
       - DBENGINE=mysql

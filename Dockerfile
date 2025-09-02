@@ -30,8 +30,9 @@ RUN \
   cd /usr/src/asterisk-22*/ && \
   make menuselect.makeopts && \
   menuselect/menuselect --enable app_stack menuselect.makeopts
-RUN \  
-#  make menuselect && \
+RUN \
+  cd /usr/src/asterisk-22*/ && \
+  make menuselect && \
   make && \
   make install && \
   make samples && \

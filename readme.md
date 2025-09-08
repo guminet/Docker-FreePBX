@@ -9,5 +9,5 @@ git clone https://github.com/guminet/Docker-FreePBX.git
 ```
 Start image with Docker Compose  
 ```
-docker compose -d up
+docker compose up -d
 ```
